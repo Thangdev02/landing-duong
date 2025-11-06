@@ -56,7 +56,6 @@ export default function FloatingRobot() {
       >
         <Canvas
           camera={{ position: [0, 0, 3], fov: 50 }}
-          className=" backdrop-blur-sm rounded-2xl"
           style={{ width: "300px", height: "400px" }}
         >
           <ambientLight intensity={1.5} />

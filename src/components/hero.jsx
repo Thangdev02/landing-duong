@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import PaperModal from "./PaperModal";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
-  const [showModal, setShowModal] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const navigate = useNavigate();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -87,13 +87,13 @@ export default function Hero() {
                   boxShadow: "0 0 20px rgba(255, 215, 0, 0.3)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setShowModal(true)}
+                onClick={() => navigate("/my-story")}  
                 className="px-8 py-4 border border-blue-500 rounded-lg font-semibold text-blue-700 bg-blue-50 hover:bg-yellow-100 transition-all relative z-10"
               >
                 View My Story
               </motion.button>
 
-              {/* Hiệu ứng giấy nhỏ bay lên (hover preview) */}
+              {/* Hover preview paper effect */}
               <AnimatePresence>
                 {hovered && (
                   <motion.div
@@ -155,9 +155,6 @@ export default function Hero() {
           />
         </div>
       </motion.div>
-
-      {/* PAPER MODAL */}
-      <PaperModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </section>
   );
 }

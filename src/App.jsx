@@ -1,35 +1,52 @@
-import { useState, useEffect } from "react"
-import { CookiesProvider, useCookies } from "react-cookie"
-import HomePage from "./HomePage"
-import IntroScreen from "./IntroScreen"
-import FloatingRobot from "./components/FloatingRobot"
+import { useState, useEffect } from "react";
+import { CookiesProvider, useCookies } from "react-cookie";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import IntroScreen from "./IntroScreen";
+import FloatingRobot from "./components/FloatingRobot";
+import ProjectDetail from "./ProjectDetail";
+import Navigation from "./components/Navigation";
+import HomePage from "./pages/HomePage";
+import AchievementDetail from "./pages/AchievementDetail";
+import MyStory from "./pages/MyStory";
 
 function AppContent() {
-  const [cookies] = useCookies(["intro_seen"])
-  const [showIntro, setShowIntro] = useState(!cookies.intro_seen)
+  const [cookies, setCookie] = useCookies(["intro_seen"]);
+  const [showIntro, setShowIntro] = useState(!cookies.intro_seen);
 
   useEffect(() => {
-    if (cookies.intro_seen) setShowIntro(false)
-  }, [cookies])
+    if (cookies.intro_seen) setShowIntro(false);
+  }, [cookies]);
+
+  const handleFinishIntro = () => {
+    setCookie("intro_seen", true, { path: "/", maxAge: 60 * 60 * 24 * 30 }); // 30 ngày
+    setShowIntro(false);
+  };
 
   return (
     <>
       {showIntro ? (
-        <IntroScreen onFinish={() => setShowIntro(false)} />
+        <IntroScreen onFinish={handleFinishIntro} />
       ) : (
         <>
           <HomePage />
-          <FloatingRobot /> 
+          <FloatingRobot />
         </>
       )}
     </>
-  )
+  );
 }
 
 export default function App() {
   return (
     <CookiesProvider>
-      <AppContent />
+      <Router>
+        <Navigation/>
+        <Routes>
+          <Route path="/" element={<AppContent />} />
+          <Route path="/achievement/:id" element={<AchievementDetail />} />
+          <Route path="/my-story" element={<MyStory />} />
+          </Routes>
+      </Router>
     </CookiesProvider>
-  )
+  );
 }

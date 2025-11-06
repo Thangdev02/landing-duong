@@ -1,15 +1,15 @@
 "use client"
 
 import { useState } from "react"
-import IntroScreen from "./IntroScreen"
 import { motion } from "framer-motion"
-import Hero from "./components/hero"
-import Achievements from "./components/achievements"
-import Projects from "./components/projects"
-import Skills from "./components/skills"
-import Contact from "./components/contact"
-import About from "./components/about"
-import ResearchProduct from "./components/ResearchProduct"
+import IntroScreen from "../IntroScreen"
+import Hero from "../components/hero"
+import Projects from "../components/projects"
+import Skills from "../components/skills"
+import About from "../components/about"
+import ResearchProduct from "../components/ResearchProduct"
+import Contact from "../components/contact"
+import Achievements from "../components/achievements"
 
 export default function HomePage() {
   const [introDone, setIntroDone] = useState(false)
