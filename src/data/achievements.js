@@ -4,7 +4,7 @@ export const achievements = [
       id: "vex-world",
       title: "VEX Robotics World Championship",
       subtitle: "Dallas, Texas, US • 2025",
-      highlight: "Top 91/800 teams • Robot Skills",
+      highlight: "Top 91 over 800 teams in Robot Skills Challenge\n Top 44 in Head to Head Match in Opportunity Division ",
       image: "/av1.jpg",
       period: "May 2025",
       content: `
@@ -23,7 +23,7 @@ export const achievements = [
       id: "national-champion",
       title: "Vietnam VEX Robotics National Championship",
       subtitle: "SSIS & Red River Delta • 2024",
-      highlight: "Tournament Champions",
+      highlight: "Tournament Champions | Qualifying Tournament 2024\n Tournament Champions | Regional Round 2024\nDesign Award |  Regional Round 2024 \n Design Award |  Regional Round 2024 ",
       image: "/av2.jpg",
       period: "2024",
       content: `
@@ -39,9 +39,9 @@ export const achievements = [
     },
     {
       id: "stem-for-life",
-      title: "Founder, STEM For Life",
-      subtitle: "100+ kids • 20M VND donated",
-      highlight: "KidAssist App + Robotics Workshops",
+      title: "First Lego League Virtual Open International",
+      subtitle: "Greece, 2021",
+      highlight: "PIT Award",
       image: "/av3.jpeg",
       period: "Sept 2025 – Present",
       content: `
@@ -56,8 +56,8 @@ export const achievements = [
     },
     {
       id: "sweetened",
-      title: "Vice-President, Sweetened",
-      subtitle: "300+ children • Hau Giang",
+      title: "School's Academic Awards",
+      subtitle: "International School Ho Chi Minh City - American Academy, 2022 - 2025",
       highlight: "Across the River Program",
       image: "/av4.jpeg",
       period: "Dec 2023 – Present",

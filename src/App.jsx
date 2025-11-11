@@ -3,11 +3,11 @@ import { CookiesProvider, useCookies } from "react-cookie";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import IntroScreen from "./IntroScreen";
 import FloatingRobot from "./components/FloatingRobot";
-import ProjectDetail from "./ProjectDetail";
 import Navigation from "./components/Navigation";
 import HomePage from "./pages/HomePage";
 import AchievementDetail from "./pages/AchievementDetail";
 import MyStory from "./pages/MyStory";
+import ProjectDetail from "./pages/ProjectDetail";
 
 function AppContent() {
   const [cookies, setCookie] = useCookies(["intro_seen"]);
@@ -29,7 +29,7 @@ function AppContent() {
       ) : (
         <>
           <HomePage />
-          <FloatingRobot />
+          {/* <FloatingRobot /> */}
         </>
       )}
     </>
@@ -45,6 +45,7 @@ export default function App() {
           <Route path="/" element={<AppContent />} />
           <Route path="/achievement/:id" element={<AchievementDetail />} />
           <Route path="/my-story" element={<MyStory />} />
+          <Route path="/projectDetail/:title" element={<ProjectDetail />} />
           </Routes>
       </Router>
     </CookiesProvider>

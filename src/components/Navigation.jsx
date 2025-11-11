@@ -14,8 +14,9 @@ export default function Navigation() {
 
   const navLinks = [
     { name: "Home", href: "#" },
-    { name: "Projects", href: "#projects" },
-    { name: "Blog", href: "#blog" },
+    { name: "My Story", href: "/my-story" },
+    { name: "Achievements", href: "#achievements" },
+    { name: "Leadership", href: "#leadership" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -30,7 +31,7 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-blue-600">MyPortfolio</div>
+        <div className="text-2xl font-bold text-blue-600">Duong Minh Khoi</div>
 
         {/* Menu */}
         <ul className="flex gap-6 text-gray-800 font-medium">

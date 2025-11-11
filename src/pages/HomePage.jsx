@@ -10,6 +10,7 @@ import About from "../components/about"
 import ResearchProduct from "../components/ResearchProduct"
 import Contact from "../components/contact"
 import Achievements from "../components/achievements"
+import OtherActivities from "../components/OtherActivities"
 
 export default function HomePage() {
   const [introDone, setIntroDone] = useState(false)
@@ -56,6 +57,7 @@ export default function HomePage() {
           <Achievements />
           <Projects />
           <ResearchProduct />
+          <OtherActivities/>
           <Skills />
           <Contact />
         </motion.main>

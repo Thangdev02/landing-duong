@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -53,7 +55,7 @@ export default function MyStory() {
       </section>
 
       {/* STORY BODY */}
-      <section className="max-w-3xl mx-auto px-6 py-20">
+      <section className="max-w-3xl mx-auto px-6 py-20 space-y-20">
         
         {/* Section 1 */}
         <motion.div
@@ -66,14 +68,12 @@ export default function MyStory() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Where Curiosity Started
           </h2>
-
           <p>
             Ever since I was young, I’ve always been fascinated by how machines move,
             how programs think, and how technology transforms the world around us.
             What started as tiny experiments—disassembling toys, building LEGO bots,
             and writing my first “if-else” statements—slowly became a passion.
           </p>
-
           <p>
             These early moments didn’t feel special at the time, but looking back,
             they were the sparks that shaped everything that followed.
@@ -103,13 +103,11 @@ export default function MyStory() {
           className="prose prose-lg max-w-none"
         >
           <h2 className="text-3xl font-bold">The Moment Everything Changed</h2>
-
           <p>
             My first real breakthrough was discovering robotics competitions. The
             thrill of designing something from scratch—writing its logic, improving
             its precision, and watching it compete—was unlike anything else.
           </p>
-
           <p>
             It wasn’t just about winning. It was about solving problems creatively,
             learning fast, and pushing myself harder each time.
@@ -142,12 +140,15 @@ export default function MyStory() {
             those from underprivileged backgrounds—discover the same excitement
             that shaped my childhood.
           </p>
-
           <p>
             Teaching a student how to build their first robot or write their first
             program reminded me of why I fell in love with this field in the first place.
           </p>
         </motion.div>
+
+        {/* ---- NEW STORY SECTIONS ---- */}
+
+        
 
         {/* The Dream */}
         <motion.div
@@ -162,10 +163,9 @@ export default function MyStory() {
             My dream is to build technology that creates real impact—through
             robotics, AI, and tools that empower students worldwide.
           </p>
-
           <p>
             This journey has taught me something powerful:  
-            <strong>every idea begins small—but grows when shared.</strong>
+            <strong> every idea begins small—but grows when shared.</strong>
           </p>
         </motion.div>
       </section>

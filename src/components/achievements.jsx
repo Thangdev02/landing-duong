@@ -10,7 +10,7 @@ export default function Achievements() {
   const navigate = useNavigate();
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/20">
+    <section id="achievements" className="py-20 px-6 bg-gradient-to-b from-background to-muted/20">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ export default function Achievements() {
                       <p className="text-sm opacity-90 mt-1">{a.subtitle}</p>
                     </div>
                   </div>
-                  <p className="text-yellow-400 font-bold text-xl mt-4">{a.highlight}</p>
+                  <p className="text-yellow-400 font-bold text-xl mt-4 highlight">{a.highlight}</p>
                   <p className="mt-3 text-sm opacity-80 animate-pulse">Click to read full story →</p>
                 </div>
 

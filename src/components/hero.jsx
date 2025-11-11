@@ -69,6 +69,7 @@ export default function Hero() {
                 boxShadow: "0 0 30px rgba(88, 126, 255, 0.4)",
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/achievement/vex-world")}  
               className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold flex items-center gap-2 hover:bg-blue-700 transition-colors"
             >
               Explore My Work

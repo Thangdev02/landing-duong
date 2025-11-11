@@ -112,3 +112,7 @@
   body {
   }
 }
+
+.highlight {
+  white-space: pre-line;
+}
