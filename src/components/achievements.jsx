@@ -1,8 +1,9 @@
 // src/components/Achievements.jsx
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Trophy, Zap, Users, Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { achievements } from "../data/achievements";
+import { useState } from "react";
 
 const icons = { Trophy, Zap, Users, Target };
 
@@ -28,6 +29,8 @@ export default function Achievements() {
         <div className="grid md:grid-cols-2 gap-10">
           {achievements.map((a, i) => {
             const Icon = icons[Object.keys(icons)[i]];
+            const [isOpen, setIsOpen] = useState(false);
+
             return (
               <motion.div
                 key={a.id}
@@ -56,12 +59,62 @@ export default function Achievements() {
                       <p className="text-sm opacity-90 mt-1">{a.subtitle}</p>
                     </div>
                   </div>
-                  <p className="text-yellow-400 font-bold text-xl mt-4 highlight">{a.highlight}</p>
-                  <p className="mt-3 text-sm opacity-80 animate-pulse">Click to read full story →</p>
+
+                  {/* What I get Button + Bottom-to-Top Dropdown */}
+                  <div className="relative mt-4">
+                    <button
+                      type="button"
+                      onMouseEnter={() => setIsOpen(true)}
+                      onMouseLeave={() => setIsOpen(false)}
+                      className="inline-flex items-center gap-2 rounded-full bg-yellow-400/20 px-4 py-2 text-sm font-semibold text-yellow-300 backdrop-blur transition-all hover:bg-yellow-400/30"
+                    >
+                      What I get
+                      <svg
+                        className="h-4 w-4 transition-transform duration-200"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+
+                    {/* Dropdown: Slides UP from the button */}
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          transition={{ duration: 0.2, ease: "easeOut" }}
+                          className="absolute bottom-full left-0 mb-2 w-80 rounded-xl bg-black/85 p-4 text-sm text-yellow-200 backdrop-blur-lg shadow-xl z-20"
+                          style={{ transformOrigin: "bottom" }}
+                          onMouseEnter={() => setIsOpen(true)}
+                          onMouseLeave={() => setIsOpen(false)}
+                        >
+                          {a.highlight.split("\n").map((line, idx) => (
+                            <p key={idx} className="mb-1 last:mb-0 leading-relaxed">
+                              {line.trim()}
+                            </p>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+
+                  <p className="mt-3 text-sm opacity-80 animate-pulse">
+                    Click to read full story
+                  </p>
                 </div>
 
-                {/* Shine */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
+                {/* Shine Effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 </div>
               </motion.div>
