@@ -29,7 +29,7 @@ function AppContent() {
       ) : (
         <>
           <HomePage />
-          {/* <FloatingRobot /> */}
+          <FloatingRobot />
         </>
       )}
     </>

@@ -53,12 +53,11 @@ export const achievements = [
   - Partnered with **Maison Chance Shelter**.
       `.trim(),
       gallery: ["/stem-kids.jpg", "/workshop1.jpg", "/donation.jpg"]
-    },
+    },  
     {
       id: "sweetened",
-      title: "School's Academic Awards",
-      subtitle: "International School Ho Chi Minh City - American Academy, 2022 - 2025",
-      highlight: "Across the River Program",
+      title: "School's academic award",
+      highlight: "Dean’s List – Semester II Academic Year 2022 - Semester I 2025 \n Principals’ List- straight A Academic Academic Year 2024-2025 for High Academic Achievement Semester 2",
       image: "/av4.jpeg",
       period: "Dec 2023 – Present",
       content: `
