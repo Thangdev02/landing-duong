@@ -12,9 +12,9 @@ export default function Projects() {
       title: "STEM For Life",
       role: "Founder",
       images: [
-        "/project-autonomous.jpg",
-        "/cy1.jpg",
-        "/cy2.jpg"
+        "/steam1.jpg",
+        "/steam2.jpg",
+        "/steam3.jpg"
       ],
       content: `
 It all started during a Mid-Autumn Festival event, when I visited underprivileged children and realized how limited their access to educational resources was. Seeing their curiosity and eagerness to learn despite the circumstances inspired me to create a project that could make a real difference.
