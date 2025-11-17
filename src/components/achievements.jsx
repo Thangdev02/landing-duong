@@ -34,9 +34,7 @@ export default function Achievements() {
           <h2 className="text-5xl font-extrabold tracking-tight text-cyan-300">
             HONORS & AWARDS
           </h2>
-          <p className="text-lg text-gray-400 mt-4">
-            Click what i got to explore the award
-          </p>
+         
         </motion.div>
 
         {/* GRID */}
@@ -51,6 +49,7 @@ export default function Achievements() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
+                onClick={() => navigate("/achievement/" + a.id)}
                 className="group relative h-96 rounded-3xl overflow-hidden 
                 border border-cyan-500/20 hover:border-cyan-400/50
                 shadow-[0_0_25px_rgba(0,255,255,0.12)]

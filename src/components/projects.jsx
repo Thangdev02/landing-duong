@@ -12,9 +12,13 @@ export default function Projects() {
       title: "STEM For Life",
       role: "Founder",
       images: [
-        "/steam1.jpg",
+        "/steam5.jpg",
         "/steam2.jpg",
-        "/steam3.jpg"
+        "/steam3.jpg",
+        "/steam4.jpg",
+        "/steam1.jpg",
+        "/steam6.jpg",
+        "/steam7.jpg"
       ],
       content: `
 It all started during a Mid-Autumn Festival event, when I visited underprivileged children and realized how limited their access to educational resources was. Seeing their curiosity and eagerness to learn despite the circumstances inspired me to create a project that could make a real difference.
@@ -32,7 +36,8 @@ This project taught me that education is not just about knowledge—it’s about
       images: [
         "/lead1.jpg",
         "/cy1.jpg",
-        "/cy2.jpg"
+        "/cy2.jpg",
+        "/cyber3.jpg"
       ],
       content: `
     As a Technical Advisor at Cybetech Assemble, I support a youth-led initiative dedicated to making digital literacy and computer science accessible to more young learners. When I first joined in June 2025, what inspired me most was seeing students who once felt intimidated by technology suddenly light up when they understood how it worked—and knowing I could help scale that impact. 
@@ -47,7 +52,8 @@ This project taught me that education is not just about knowledge—it’s about
       images: [
         "/lead2.jpg",
         "/sw1.jpg",
-        "/sw.jpg"
+        "/sw2.jpg",
+        "/swt4.jpg",
       ],
       content: `
 As Vice-President of Sweetened (Dec 2023 – Present), I helped lead a STEM-based charity project that combines science education with fundraising. I organized outreach programs that benefited over 300 children and raised donations to support Tam Duc Shelter in District 4.
@@ -62,7 +68,8 @@ One highlight was organizing the summer program “Across the River for the Futu
         "/panda3.jpg",
         "/panda1.jpg",
         "/panda2.jpg",
-        "/lead3.jpg"
+        "/lead3.jpg",
+        "/robbot.jpg"
       ],
       content: `
 When I joined Panda Robotics Vietnam as the Main Coder, my goal was simple: build a robot that could think, adapt, and compete—and help younger students discover the excitement behind engineering. What started as a technical challenge quickly grew into a mission to make robotics safer, more accessible, and inspiring for kids.. 
@@ -79,7 +86,8 @@ eyond competing, I wanted to create a pathway for others to follow. I mentored a
       images: [
         "/sch1.jpg",
         "/sch2.jpg",
-        "/sch3.jpg"
+        "/sch3.jpg",
+        "/rbb.jpg"
       ],
       content: `
 When I founded the Robotics Club at ISHCMC, it wasn’t just about building robots—it was about building a place where students could explore, make mistakes, and feel excited about STEM. Back in 2022, our school didn’t have a dedicated space for robotics enthusiasts, so I gathered a small group of curious students, and together we created something from scratch. 

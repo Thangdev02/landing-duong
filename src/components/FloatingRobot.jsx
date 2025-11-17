@@ -47,7 +47,7 @@ export default function FloatingRobot() {
   }, [])
 
   return (
-    <div className="fixed  right-6 z-50 pointer-events-none" style={{ bottom: "-18%" }} >
+    <div className="fixed   z-50 pointer-events-none" style={{ bottom: "-18%", right: "-5%" }} >
       {/* Robot Canvas */}
       <motion.div
         className=" pointer-events-auto rounded-2xl overflow-hidden "

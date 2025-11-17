@@ -79,7 +79,7 @@ export default function About() {
               {[
                 { value: "3.74/4", label: "Cumulative GPA" },
                 { value: "1350", label: "SAT" },
-                { value: "4, AP", label: "AP" },
+                { value: "4, AP", label: "AP PRECALCULUS" },
               ].map((stat, i) => (
                 <motion.div
                   key={i}

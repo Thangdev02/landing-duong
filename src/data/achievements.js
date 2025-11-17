@@ -7,6 +7,7 @@ export const achievements = [
       highlight: "Top 91 over 800 teams in Robot Skills Challenge\n Top 44 in Head to Head Match in Opportunity Division ",
       image: "/av1.jpg",
       period: "May 2025",
+      location:'Dallas, Texas, US 2025',
       content: `
   ## Main Coder, Panda Robotics Vietnam
   **May 2024 – Present**
@@ -26,6 +27,7 @@ export const achievements = [
       highlight: "Tournament Champions | Qualifying Tournament 2024\n Tournament Champions | Regional Round 2024\nDesign Award |  Regional Round 2024 \n Design Award |  Regional Round 2024 ",
       image: "/av2.jpg",
       period: "2024",
+      location:'SSIS & Red River Delta 2024',
       content: `
   ## Leader, ISHCMC Robotics Club
   **Dec 2022 – Feb 2024**
@@ -44,6 +46,7 @@ export const achievements = [
       highlight: "PIT Award",
       image: "/av3.jpeg",
       period: "Sept 2025 – Present",
+      location:'Greece, 2021',
       content: `
   ## Founder & Workshop Lead
   

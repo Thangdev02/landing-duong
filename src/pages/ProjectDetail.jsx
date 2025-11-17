@@ -42,7 +42,7 @@ export default function ProjectDetail() {
 
         <button
           onClick={() => navigate(-1)}
-          className="absolute top-6 left-6 bg-cyan-500/30 hover:bg-cyan-500/50 text-white rounded-full p-2 shadow-lg transition"
+          className="absolute top-6 left-6 bg-cyan-500/30 hover:bg-cyan-500/50 text-white rounded-full p-2 shadow-lg transition mt-12"
         >
           <ArrowLeft size={24} />
         </button>

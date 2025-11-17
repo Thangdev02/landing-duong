@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
-import { CookiesProvider, useCookies } from "react-cookie";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import IntroScreen from "./IntroScreen";
 import FloatingRobot from "./components/FloatingRobot";
 import Navigation from "./components/Navigation";
@@ -9,45 +8,35 @@ import AchievementDetail from "./pages/AchievementDetail";
 import MyStory from "./pages/MyStory";
 import ProjectDetail from "./pages/ProjectDetail";
 
-function AppContent() {
-  const [cookies, setCookie] = useCookies(["intro_seen"]);
-  const [showIntro, setShowIntro] = useState(!cookies.intro_seen);
+export default function App() {
+  const hasSeenIntro = sessionStorage.getItem("intro_seen") === "true";
 
-  useEffect(() => {
-    if (cookies.intro_seen) setShowIntro(false);
-  }, [cookies]);
-
-  const handleFinishIntro = () => {
-    setCookie("intro_seen", true, { path: "/", maxAge: 60 * 60 * 24 * 30 }); // 30 ngày
-    setShowIntro(false);
-  };
+  // Đánh dấu đã xem ngay khi lần đầu mở
+  if (!hasSeenIntro) {
+    sessionStorage.setItem("intro_seen", "true");
+  }
 
   return (
     <>
-      {showIntro ? (
-        <IntroScreen onFinish={handleFinishIntro} />
-      ) : (
-        <>
-          <HomePage />
-          <FloatingRobot />
-        </>
-      )}
-    </>
-  );
-}
+      {/* QUAN TRỌNG NHẤT: Phải có key + mode="wait" thì exit mới chạy và unmount đúng */}
+      <AnimatePresence mode="wait">
+  {!hasSeenIntro && (
+    <IntroScreen key="intro-screen" onFinish={() => {}} />
+  )}
+</AnimatePresence>
 
-export default function App() {
-  return (
-    <CookiesProvider>
-      <Router>
-        <Navigation/>
-        <Routes>
-          <Route path="/" element={<AppContent />} />
-          <Route path="/achievement/:id" element={<AchievementDetail />} />
-          <Route path="/my-story" element={<MyStory />} />
-          <Route path="/projectDetail/:title" element={<ProjectDetail />} />
+      {/* Trang chính - luôn render, chỉ bị che bởi Intro lần đầu */}
+      <div className={!hasSeenIntro ? "invisible" : "visible"}>        <Router>
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/achievement/:id" element={<AchievementDetail />} />
+            <Route path="/my-story" element={<MyStory />} />
+            <Route path="/projectDetail/:title" element={<ProjectDetail />} />
           </Routes>
-      </Router>
-    </CookiesProvider>
+          <FloatingRobot />
+        </Router>
+      </div>
+    </>
   );
 }

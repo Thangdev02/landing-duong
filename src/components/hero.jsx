@@ -44,14 +44,7 @@ export default function Hero() {
       >
         {/* TEXT SECTION */}
         <div>
-          <motion.div variants={itemVariants} className="mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-900/40 border border-cyan-500/40 backdrop-blur">
-              <span className="inline-block w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-cyan-300">
-                Robotics & Computer Science Student
-              </span>
-            </div>
-          </motion.div>
+         
 
           <motion.h1
             variants={itemVariants}
