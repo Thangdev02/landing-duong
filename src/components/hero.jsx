@@ -24,6 +24,12 @@ export default function Hero() {
       transition: { duration: 0.8, ease: "easeOut" },
     },
   };
+  const handleScrollToAchievements = () => {
+    const element = document.getElementById("achievements");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="min-h-screen flex items-center justify-center relative px-6 md:px-12 py-20 
@@ -71,7 +77,7 @@ export default function Hero() {
                 boxShadow: "0 0 35px rgba(0, 200, 255, 0.5)",
               }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate("/achievement/vex-world")}
+              onClick={handleScrollToAchievements}
               className="px-8 py-4 bg-cyan-500 text-black rounded-lg font-semibold 
                   flex items-center gap-2 hover:bg-cyan-400 transition-colors"
             >

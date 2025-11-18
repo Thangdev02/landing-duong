@@ -34,7 +34,7 @@ export default function HomePage() {
 
       <Hero />
       <About />
-      <Achievements />
+      <Achievements id="achievements" />
       <Projects />
       <ResearchProduct />
       <OtherActivities />
