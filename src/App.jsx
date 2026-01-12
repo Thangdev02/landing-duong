@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import AchievementDetail from "./pages/AchievementDetail";
 import MyStory from "./pages/MyStory";
 import ProjectDetail from "./pages/ProjectDetail";
+import NotfoundPage from "./pages/NotfoundPage";
 
 export default function App() {
   const hasSeenIntro = sessionStorage.getItem("intro_seen") === "true";
@@ -26,13 +27,14 @@ export default function App() {
 </AnimatePresence>
 
       {/* Trang chính - luôn render, chỉ bị che bởi Intro lần đầu */}
-      <div className={!hasSeenIntro ? "invisible" : "visible"}>        <Router>
+      <div className={!hasSeenIntro ? "invisible" : "visible"}><Router>
           <Navigation />
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/achievement/:id" element={<AchievementDetail />} />
+            <Route path="/" element={<NotfoundPage />} />
+            {/* <Route path="/" element={<HomePage />} /> */}
+            {/* <Route path="/achievement/:id" element={<AchievementDetail />} />
             <Route path="/my-story" element={<MyStory />} />
-            <Route path="/projectDetail/:title" element={<ProjectDetail />} />
+            <Route path="/projectDetail/:title" element={<ProjectDetail />} /> */}
           </Routes>
           <FloatingRobot />
         </Router>
