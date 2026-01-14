@@ -30,11 +30,11 @@ export default function App() {
       <div className={!hasSeenIntro ? "invisible" : "visible"}><Router>
           <Navigation />
           <Routes>
-            <Route path="/" element={<NotfoundPage />} />
-            {/* <Route path="/" element={<HomePage />} /> */}
-            {/* <Route path="/achievement/:id" element={<AchievementDetail />} />
+            {/* <Route path="/" element={<NotfoundPage />} /> */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/achievement/:id" element={<AchievementDetail />} />
             <Route path="/my-story" element={<MyStory />} />
-            <Route path="/projectDetail/:title" element={<ProjectDetail />} /> */}
+            <Route path="/projectDetail/:title" element={<ProjectDetail />} />
           </Routes>
           <FloatingRobot />
         </Router>
